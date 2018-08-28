@@ -7,4 +7,13 @@
 // To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
 // layout file, like app/views/layouts/application.html.erb
 
-console.log('Hello World from Webpacker')
+import jstz from 'jstz'
+
+function setCookie(name, value) {
+  var expires = new Date()
+  expires.setTime(expires.getTime() + (24 * 60 * 60 * 1000))
+  document.cookie = name + '=' + value + ';expires=' + expires.toUTCString()
+}
+
+const timezone = jstz.determine()
+setCookie("timezone", timezone.name())

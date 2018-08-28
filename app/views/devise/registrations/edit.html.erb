@@ -18,6 +18,10 @@
       <% end %>
 
       <div class="form-group">
+        <%= f.time_zone_select :time_zone, nil, default: browser_time_zone.name %>
+      </div>
+
+      <div class="form-group">
         <%= f.password_field :password, autocomplete: "off", class: 'form-control', placeholder: 'Password'  %>
         <p class="form-text text-muted"><small>Leave password blank if you don't want to change it</small></p>
       </div>

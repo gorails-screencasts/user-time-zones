@@ -22,6 +22,10 @@
       </div>
 
       <div class="form-group">
+        <%= f.time_zone_select :time_zone, nil, { default: browser_time_zone.name }, { class: "" } %>
+      </div>
+
+      <div class="form-group">
         <%= f.submit "Sign up", class: "btn btn-primary btn-block btn-lg" %>
       </div>
     <% end %>
