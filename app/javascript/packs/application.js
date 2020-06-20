@@ -29,5 +29,4 @@ function findTimeZone() {
   }
 }
 
-const timezone = findTimeZone()
-setCookie("timezone", timezone.name())
+setCookie("timezone", findTimeZone())
